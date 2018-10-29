@@ -20,7 +20,7 @@ namespace DotNetMidtermB.Controllers
         public ActionResult Index()
         {
             var orders = db.Orders.Include(o => o.Size);
-            return View(orders.ToList());
+            return View(orders.OrderBy(a => a.LastName).ThenBy(a => a.FirstName).ToList());
         }
 
         // GET: Orders/Details/5
@@ -42,7 +42,7 @@ namespace DotNetMidtermB.Controllers
         // GET: Orders/Create
         public ActionResult Create()
         {
-            ViewBag.SizeId = new SelectList(db.Sizes, "SizeId", "Size1");
+            ViewBag.SizeId = new SelectList(db.Sizes.OrderBy(a => a.Size1), "SizeId", "Size1");
             return View();
         }
 
@@ -76,7 +76,7 @@ namespace DotNetMidtermB.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.SizeId = new SelectList(db.Sizes, "SizeId", "Size1", order.SizeId);
+            ViewBag.SizeId = new SelectList(db.Sizes.OrderBy(a => a.Size1), "SizeId", "Size1", order.SizeId);
             return View(order);
         }
 
