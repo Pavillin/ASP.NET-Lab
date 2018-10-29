@@ -1,5 +1,3 @@
-# ASP.Net-Lab
-
 # Mid-term Lab
 
 AFixing the practical section of the midterm.
