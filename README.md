@@ -2,11 +2,11 @@
 
 AFixing the practical section of the midterm.
 
-Dylan Sprague - 200368636 /Dev
-Keon Muellerchen - 200344974 /Dev
-Ken Alexander - 200197039 /Dev
-Luke Marcucci - 200372453 /Dev
-Mark Annandale - 200217996 /Mentor
+* Dylan Sprague - 200368636 /Dev
+* Keon Muellerchen - 200344974 /Dev
+* Ken Alexander - 200197039 /Dev
+* Luke Marcucci - 200372453 /Dev
+* Mark Annandale - 200217996 /Mentor
 
 
 ## Built With
