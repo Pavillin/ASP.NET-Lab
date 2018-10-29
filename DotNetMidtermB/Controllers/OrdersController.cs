@@ -10,11 +10,13 @@ using DotNetMidtermB.Models;
 
 namespace DotNetMidtermB.Controllers
 {
+    [Authorize]
     public class OrdersController : Controller
     {
         private OrderModel db = new OrderModel();
 
         // GET: Orders
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var orders = db.Orders.Include(o => o.Size);
@@ -22,6 +24,7 @@ namespace DotNetMidtermB.Controllers
         }
 
         // GET: Orders/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
